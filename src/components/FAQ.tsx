@@ -40,24 +40,20 @@ export default function FAQ() {
 
   return (
     <section className="py-10 lg:py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[42px]">
         <div className="flex flex-col gap-12 lg:gap-16">
           {/* Top Column */}
-          <div className="w-full max-w-2xl">
+          <div className="w-full max-w-2xl mx-auto text-center">
             <FadeIn>
               <h2 className="text-[2rem] leading-[40px] lg:text-[2.5rem] lg:leading-[46px] font-bold tracking-[-0.02em] text-gray-900 mb-3">
                 Frequently Asked<br />Questions
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md leading-[24px]">
-                Find answers to common questions about Equidux, our features, and how to get started on your investment journey.
+              <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] max-w-md mx-auto leading-[24px]">
+                Find answers to common questions about Equidux, our products,
+                and how to get started on your investment journey.
               </p>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <button className="px-8 py-3.5 rounded-full bg-black text-white text-[0.875rem] md:text-base font-medium hover:bg-gray-800 transition-colors">
-                Learn More
-              </button>
             </FadeIn>
           </div>
 
