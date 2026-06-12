@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { AnimatePresence, motion } from "framer-motion";
+
 import CompanyMenuPanel from "./CompanyMenuPanel";
 
 type MobileView = "main" | "company";
@@ -70,12 +72,6 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link
-              href="#"
-              className="text-base font-medium text-black hover:text-primary transition-colors"
-            >
-              Learn
-            </Link>
 
             <div
               ref={companyRef}
@@ -108,15 +104,30 @@ export default function Navbar() {
                 </span>
               </button>
 
-              {companyOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
-                  <CompanyMenuPanel
-                    variant="dropdown"
-                    onItemClick={() => setCompanyOpen(false)}
-                  />
-                </div>
-              )}
+              <AnimatePresence>
+                {companyOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.98 }}
+                    transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-4 origin-top"
+                  >
+                    <CompanyMenuPanel
+                      variant="dropdown"
+                      onItemClick={() => setCompanyOpen(false)}
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
+
+            <Link
+              href="#"
+              className="text-base font-medium text-black hover:text-primary transition-colors"
+            >
+              Learn
+            </Link>
           </div>
 
           <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
@@ -162,86 +173,110 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 h-[calc(100vh-5rem)] bg-white px-4 pt-6 pb-8 overflow-y-auto">
-          {mobileView === "main" ? (
-            <div className="flex flex-col w-full">
-              <div className="space-y-6">
-                <Link
-                  href="/"
-                  onClick={closeMobile}
-                  className="block text-xl font-semibold text-black"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:hidden fixed inset-x-0 top-20 h-[calc(100vh-5rem)] bg-white px-4 pt-6 pb-8 overflow-y-auto"
+          >
+            <AnimatePresence mode="wait">
+              {mobileView === "main" ? (
+                <motion.div
+                  key="main"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex flex-col w-full"
                 >
-                  Home
-                </Link>
-                <Link
-                  href="#"
-                  onClick={closeMobile}
-                  className="block text-xl font-semibold text-black"
+                  <div className="space-y-6">
+                    <Link
+                      href="/"
+                      onClick={closeMobile}
+                      className="block text-xl font-semibold text-black"
+                    >
+                      Home
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setMobileView("company")}
+                      className="flex w-full items-center justify-between text-xl font-semibold text-black"
+                    >
+                      Company
+                      <span className="w-6 h-6 rounded-full bg-[#f1f1f1] flex items-center justify-center flex-shrink-0">
+                        <svg
+                          className="w-3 h-3"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2.5}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <Link
+                      href="#"
+                      onClick={closeMobile}
+                      className="block text-xl font-semibold text-black"
+                    >
+                      Learn
+                    </Link>
+                  </div>
+
+                  <div className="flex flex-col w-full gap-3 pt-8">
+                    <button className="w-full text-center bg-[#fafafa] text-black text-base font-bold px-4 py-4 rounded-full hover:bg-gray-100 transition-colors">
+                      Download App
+                    </button>
+                    <button className="w-full text-center bg-black text-white text-base font-bold px-4 py-4 rounded-full hover:bg-gray-800 transition-colors">
+                      Create Account
+                    </button>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="company"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex flex-col w-full"
                 >
-                  Learn
-                </Link>
-                <button
-                  type="button"
-                  onClick={() => setMobileView("company")}
-                  className="flex w-full items-center justify-between text-xl font-semibold text-black"
-                >
-                  Company
-                  <span className="w-6 h-6 rounded-full bg-[#f1f1f1] flex items-center justify-center flex-shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => setMobileView("main")}
+                    className="flex items-center gap-2 text-base font-bold text-[#414141] mb-6"
+                  >
                     <svg
-                      className="w-3 h-3"
+                      className="w-5 h-5"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      strokeWidth={2.5}
+                      strokeWidth={2}
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
+                        d="M15 19l-7-7 7-7"
                       />
                     </svg>
-                  </span>
-                </button>
-              </div>
+                    Back
+                  </button>
 
-              <div className="flex flex-col w-full gap-3 pt-8">
-                <button className="w-full text-center bg-[#fafafa] text-black text-base font-bold px-4 py-4 rounded-full hover:bg-gray-100 transition-colors">
-                  Download App
-                </button>
-                <button className="w-full text-center bg-black text-white text-base font-bold px-4 py-4 rounded-full hover:bg-gray-800 transition-colors">
-                  Create Account
-                </button>
-              </div>
-            </div>
-          ) : (
-            <div className="flex flex-col w-full">
-              <button
-                type="button"
-                onClick={() => setMobileView("main")}
-                className="flex items-center gap-2 text-base font-bold text-[#414141] mb-6"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-                Back
-              </button>
-
-              <CompanyMenuPanel variant="mobile" onItemClick={closeMobile} />
-            </div>
-          )}
-        </div>
-      )}
+                  <CompanyMenuPanel variant="mobile" onItemClick={closeMobile} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

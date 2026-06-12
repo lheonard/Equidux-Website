@@ -18,7 +18,7 @@ export default function MutualFundsChoose() {
     {
       title: "Balanced Funds",
       description:
-        "A mix of equities and fixed income for investors seeking growth with moderate risk.",
+        "A mix of equities and fixed income for investors seeking long-term growth with moderate risk.",
     },
   ];
 
