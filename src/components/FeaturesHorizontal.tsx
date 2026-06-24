@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FadeIn from "./FadeIn";
 
 export default function FeaturesHorizontal() {
@@ -8,21 +9,25 @@ export default function FeaturesHorizontal() {
       title: "Multi-Market Access",
       description:
         "Access a diverse range of investment opportunities across NGX, NASD, and global markets from one platform.",
+      image: "/features/multi-market.png",
     },
     {
       title: "Fast & Secure Transactions",
       description:
         "Experience lightning-fast trades and bank-level security for all your investment transactions.",
+      image: "/features/fast-secure.png",
     },
     {
       title: "Q-Data Insights",
       description:
         "Leverage real-time market data and intelligent analytics to make informed investment decisions.",
+      image: "/features/q-data.png",
     },
     {
       title: "Portfolio Management",
       description:
         "Track and manage your investments easily with comprehensive portfolio tools and reporting.",
+      image: "/features/portfolio.png",
     },
   ];
 
@@ -115,7 +120,14 @@ export default function FeaturesHorizontal() {
                   data-feature-card
                   className="bg-[#fafafa] rounded-[1rem] pt-2 pb-5 px-2 flex flex-col flex-shrink-0 w-[min(340px,calc(100vw-3rem))] md:w-[min(360px,calc(50vw-1.5rem))] lg:w-[360px] snap-start"
                 >
-                  <div className="w-full aspect-[4/3] bg-white rounded-[1rem] mb-6" />
+                  <div className="w-full aspect-[4/3] bg-white rounded-[1rem] mb-6 relative overflow-hidden">
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="flex flex-col flex-1 px-4">
                     <h3 className="text-[1.5rem] leading-[29px] font-bold text-gray-900 mb-3 tracking-[-0.02em]">
                       {feature.title}
