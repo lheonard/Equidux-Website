@@ -28,7 +28,7 @@ export default function CarouselArrows({
       <button
         type="button"
         onClick={() => scrollCarousel("prev")}
-        className="w-12 h-12 rounded-full bg-[#fafafa] flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
+        className="w-12 h-12 rounded-full bg-surface-gray flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
         aria-label="Scroll to previous item"
       >
         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -38,7 +38,7 @@ export default function CarouselArrows({
       <button
         type="button"
         onClick={() => scrollCarousel("next")}
-        className="w-12 h-12 rounded-full bg-[#fafafa] flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
+        className="w-12 h-12 rounded-full bg-surface-gray flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
         aria-label="Scroll to next item"
       >
         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">

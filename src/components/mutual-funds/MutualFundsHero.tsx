@@ -7,8 +7,8 @@ export default function MutualFundsHero() {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
             <FadeIn>
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-[#fafafa] text-sm font-medium text-[#414141] mb-3">
-                Mutual Funds <span className="mx-2 text-[#A0A0A0]">•</span> Smart
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-surface-gray text-sm font-medium text-text-secondary mb-3">
+                Mutual Funds <span className="mx-2 text-text-tertiary">•</span> Smart
                 Investing
               </span>
             </FadeIn>
@@ -20,7 +20,7 @@ export default function MutualFundsHero() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <p className="text-base font-medium tracking-[-0.01em] text-[#414141] mb-8 max-w-lg leading-[24px]">
+              <p className="text-base font-medium tracking-[-0.01em] text-text-secondary mb-8 max-w-lg leading-[24px]">
                 Join thousands of investors in professionally managed funds.
                 Built on disciplined diversification and expert oversight to
                 grow your wealth steadily, in any market.
@@ -36,7 +36,7 @@ export default function MutualFundsHero() {
 
           <div className="w-full lg:w-1/2 flex justify-center">
             <FadeIn delay={0.2} direction="left" fullWidth>
-              <div className="w-full max-w-[600px] aspect-[4/3] bg-[#fafafa] rounded-[1.5rem]" />
+              <div className="w-full max-w-[600px] aspect-[4/3] bg-surface-gray rounded-[1.5rem]" />
             </FadeIn>
           </div>
         </div>

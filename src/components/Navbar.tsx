@@ -18,7 +18,8 @@ export default function Navbar() {
 
   const closeMobile = () => {
     setIsOpen(false);
-    setMobileView("main");
+    // We update the view state here instead of in an effect
+    setTimeout(() => setMobileView("main"), 300); // wait for animation
   };
 
   useEffect(() => {
@@ -40,7 +41,6 @@ export default function Navbar() {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
-      setMobileView("main");
     }
 
     return () => {
@@ -131,7 +131,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
-            <button className="text-base font-medium text-black bg-[#fafafa] hover:bg-gray-100 transition-colors px-6 py-2.5 rounded-full">
+            <button className="text-base font-medium text-black bg-surface-gray hover:bg-gray-100 transition-colors px-6 py-2.5 rounded-full">
               Download App
             </button>
             <button className="bg-black text-white text-base font-medium px-6 py-2.5 rounded-full hover:bg-gray-800 transition-colors">
@@ -141,8 +141,14 @@ export default function Navbar() {
 
           <div className="lg:hidden flex items-center">
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-black bg-[#fafafa] hover:bg-gray-100 transition-colors focus:outline-none w-8 h-8 flex items-center justify-center rounded-full"
+              onClick={() => {
+                if (isOpen) {
+                  closeMobile();
+                } else {
+                  setIsOpen(true);
+                }
+              }}
+              className="text-black bg-surface-gray hover:bg-gray-100 transition-colors focus:outline-none w-8 h-8 flex items-center justify-center rounded-full"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               <svg
@@ -232,7 +238,7 @@ export default function Navbar() {
                   </div>
 
                   <div className="flex flex-col w-full gap-3 pt-8">
-                    <button className="w-full text-center bg-[#fafafa] text-black text-base font-bold px-4 py-4 rounded-full hover:bg-gray-100 transition-colors">
+                    <button className="w-full text-center bg-surface-gray text-black text-base font-bold px-4 py-4 rounded-full hover:bg-gray-100 transition-colors">
                       Download App
                     </button>
                     <button className="w-full text-center bg-black text-white text-base font-bold px-4 py-4 rounded-full hover:bg-gray-800 transition-colors">
@@ -252,7 +258,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setMobileView("main")}
-                    className="flex items-center gap-2 text-base font-bold text-[#414141] mb-6"
+                    className="flex items-center gap-2 text-base font-bold text-text-secondary mb-6"
                   >
                     <svg
                       className="w-5 h-5"

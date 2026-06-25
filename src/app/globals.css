@@ -3,8 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
-  --primary: #7FD148; /* Approximate green from design, we can adjust */
+  --primary: #7FD148;
   --primary-dark: #6BB83A;
+  --surface-gray: #fafafa;
+  --text-secondary: #414141;
+  --text-tertiary: #A0A0A0;
 }
 
 @theme inline {
@@ -12,6 +15,9 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
+  --color-surface-gray: var(--surface-gray);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

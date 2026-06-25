@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import FadeIn from "../FadeIn";
 import DualCTA from "./DualCTA";
+import FeatureCard from "../FeatureCard";
 
 export default function MutualFundsChoose() {
   const funds = [
@@ -34,7 +35,7 @@ export default function MutualFundsChoose() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md mx-auto leading-[24px]">
+            <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary mb-10 max-w-md mx-auto leading-[24px]">
               Explore a range of mutual funds tailored to different risk
               appetites, time horizons, and financial goals.
             </p>
@@ -47,39 +48,32 @@ export default function MutualFundsChoose() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           {funds.map((fund, index) => (
             <FadeIn key={fund.title} delay={0.1 + index * 0.1} fullWidth>
-              <div className="relative bg-[#fafafa] rounded-[1.5rem] p-2 flex flex-col h-full min-h-[520px]">
-                {/* Asset behind it (placeholder) */}
-                <div className="absolute inset-0 bg-[#fafafa] rounded-[1.5rem]" />
-                
-                {/* Text wrapped in white color */}
-                <div className="mt-auto relative z-10 bg-white rounded-[1rem] p-6 flex flex-col">
-                  <h3 className="text-[1.5rem] leading-[29px] font-bold text-gray-900 mb-3 tracking-[-0.02em]">
-                    {fund.title}
-                  </h3>
-                  <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px] mb-4">
-                    {fund.description}
-                  </p>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center gap-1.5 text-base font-semibold text-primary hover:text-primary-dark transition-colors mt-auto"
+              <FeatureCard
+                title={fund.title}
+                description={fund.description}
+                minHeight="min-h-[520px]"
+                textPosition="bottom"
+              >
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-1.5 text-base font-semibold text-primary hover:text-primary-dark transition-colors mt-4"
+                >
+                  Start investing
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
                   >
-                    Start investing
-                    <svg
-                      className="w-4 h-4"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </FeatureCard>
             </FadeIn>
           ))}
         </div>

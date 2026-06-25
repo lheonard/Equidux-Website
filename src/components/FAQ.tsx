@@ -50,7 +50,7 @@ export default function FAQ() {
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] max-w-md mx-auto leading-[24px]">
+              <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary max-w-md mx-auto leading-[24px]">
                 Find answers to common questions about Equidux, our products,
                 and how to get started on your investment journey.
               </p>
@@ -63,7 +63,7 @@ export default function FAQ() {
               {faqs.map((faq, index) => (
                 <FadeIn key={index} delay={0.1 + (index * 0.05)}>
                   <div 
-                    className="bg-[#fafafa] rounded-[1rem] overflow-hidden transition-all duration-200"
+                    className="bg-surface-gray rounded-[1rem] overflow-hidden transition-all duration-200"
                   >
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -89,7 +89,7 @@ export default function FAQ() {
                       openIndex === index ? 'max-h-48 pb-6 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <p className="text-[#414141] text-[1rem] font-medium tracking-[-0.02em] leading-[24px]">
+                    <p className="text-text-secondary text-[1rem] font-medium tracking-[-0.02em] leading-[24px]">
                       {faq.answer}
                     </p>
                   </div>

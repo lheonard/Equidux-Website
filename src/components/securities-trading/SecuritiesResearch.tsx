@@ -13,7 +13,7 @@ export default function SecuritiesResearch() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md mx-auto leading-[24px]">
+            <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary mb-10 max-w-md mx-auto leading-[24px]">
               Make informed investment decisions with comprehensive market data,
               company insights, and expert analysis right at your fingertips.
             </p>
@@ -35,7 +35,7 @@ export default function SecuritiesResearch() {
                   <br />
                   at Your Fingertips
                 </h3>
-                <p className="text-[#A0A0A0] text-[1rem] font-medium tracking-[-0.02em] leading-[22px] max-w-md">
+                <p className="text-text-tertiary text-[1rem] font-medium tracking-[-0.02em] leading-[22px] max-w-md">
                   Access real-time data, advanced charting tools, and in-depth
                   research reports to stay ahead of market trends and discover
                   new investment opportunities.
@@ -57,7 +57,7 @@ export default function SecuritiesResearch() {
                   <h4 className="text-[1.125rem] leading-[24px] font-bold text-white mb-2 tracking-[-0.02em]">
                     Live Price & Charts
                   </h4>
-                  <p className="text-[#A0A0A0] text-[0.875rem] font-medium tracking-[-0.02em] leading-[22px]">
+                  <p className="text-text-tertiary text-[0.875rem] font-medium tracking-[-0.02em] leading-[22px]">
                     Track market movements as they happen with interactive charts
                     and real-time pricing.
                   </p>
@@ -73,7 +73,7 @@ export default function SecuritiesResearch() {
                   <h4 className="text-[1.125rem] leading-[24px] font-bold text-white mb-2 tracking-[-0.02em]">
                     Market News & Analysis
                   </h4>
-                  <p className="text-[#A0A0A0] text-[0.875rem] font-medium tracking-[-0.02em] leading-[22px]">
+                  <p className="text-text-tertiary text-[0.875rem] font-medium tracking-[-0.02em] leading-[22px]">
                     Stay informed with curated financial news, expert commentary,
                     and market updates.
                   </p>
@@ -89,7 +89,7 @@ export default function SecuritiesResearch() {
                   <h4 className="text-[1.125rem] leading-[24px] font-bold text-white mb-2 tracking-[-0.02em]">
                     Deep Company Research
                   </h4>
-                  <p className="text-[#A0A0A0] text-[0.875rem] font-medium tracking-[-0.02em] leading-[22px]">
+                  <p className="text-text-tertiary text-[0.875rem] font-medium tracking-[-0.02em] leading-[22px]">
                     Dive into company financials, earnings reports, and key
                     metrics to evaluate potential investments.
                   </p>

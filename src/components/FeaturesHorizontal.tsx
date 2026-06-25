@@ -58,14 +58,14 @@ export default function FeaturesHorizontal() {
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md leading-[24px]">
+              <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary mb-10 max-w-md leading-[24px]">
                 A platform built to make wealth creation easy and accessible.
                 Trade across multiple markets with confidence and clarity.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="flex flex-row items-center gap-4 w-full sm:w-auto">
-                <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-[#fafafa] text-black text-[0.875rem] md:text-base font-medium hover:bg-gray-100 transition-colors">
+                <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-surface-gray text-black text-[0.875rem] md:text-base font-medium hover:bg-gray-100 transition-colors">
                   Download App
                 </button>
                 <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-black text-white text-[0.875rem] md:text-base font-medium hover:bg-gray-800 transition-colors">
@@ -79,7 +79,7 @@ export default function FeaturesHorizontal() {
             <button
               type="button"
               onClick={() => scrollCarousel("prev")}
-              className="w-12 h-12 rounded-full bg-[#fafafa] flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
+              className="w-12 h-12 rounded-full bg-surface-gray flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
               aria-label="Scroll to previous feature"
             >
               <svg
@@ -93,7 +93,7 @@ export default function FeaturesHorizontal() {
             <button
               type="button"
               onClick={() => scrollCarousel("next")}
-              className="w-12 h-12 rounded-full bg-[#fafafa] flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
+              className="w-12 h-12 rounded-full bg-surface-gray flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
               aria-label="Scroll to next feature"
             >
               <svg
@@ -118,7 +118,7 @@ export default function FeaturesHorizontal() {
                 <div
                   key={feature.title}
                   data-feature-card
-                  className="bg-[#fafafa] rounded-[1rem] pt-2 pb-5 px-2 flex flex-col flex-shrink-0 w-[min(340px,calc(100vw-3rem))] md:w-[min(360px,calc(50vw-1.5rem))] lg:w-[360px] snap-start"
+                  className="bg-surface-gray rounded-[1rem] pt-2 pb-5 px-2 flex flex-col flex-shrink-0 w-[min(340px,calc(100vw-3rem))] md:w-[min(360px,calc(50vw-1.5rem))] lg:w-[360px] snap-start"
                 >
                   <div className="w-full aspect-[4/3] bg-white rounded-[1rem] mb-6 relative overflow-hidden">
                     <Image
@@ -132,7 +132,7 @@ export default function FeaturesHorizontal() {
                     <h3 className="text-[1.5rem] leading-[29px] font-bold text-gray-900 mb-3 tracking-[-0.02em]">
                       {feature.title}
                     </h3>
-                    <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px]">
+                    <p className="text-text-secondary text-base font-medium tracking-[-0.02em] leading-[24px]">
                       {feature.description}
                     </p>
                   </div>
@@ -144,7 +144,7 @@ export default function FeaturesHorizontal() {
               <button
                 type="button"
                 onClick={() => scrollCarousel("prev")}
-                className="w-12 h-12 rounded-full bg-[#fafafa] flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
+                className="w-12 h-12 rounded-full bg-surface-gray flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
                 aria-label="Scroll to previous feature"
               >
                 <svg
@@ -158,7 +158,7 @@ export default function FeaturesHorizontal() {
               <button
                 type="button"
                 onClick={() => scrollCarousel("next")}
-                className="w-12 h-12 rounded-full bg-[#fafafa] flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
+                className="w-12 h-12 rounded-full bg-surface-gray flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors"
                 aria-label="Scroll to next feature"
               >
                 <svg

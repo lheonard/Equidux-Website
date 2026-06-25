@@ -29,7 +29,7 @@ export default function QData() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md mx-auto leading-[24px]">
+            <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary mb-10 max-w-md mx-auto leading-[24px]">
               Our proprietary analytics engine that helps you make smarter
               investment decisions and stay ahead of the market.
             </p>
@@ -50,7 +50,7 @@ export default function QData() {
                   <br />
                   at Your Fingertips
                 </h3>
-                <p className="text-[#A0A0A0] text-[1rem] font-medium tracking-[-0.02em] leading-[22px] max-w-md">
+                <p className="text-text-tertiary text-[1rem] font-medium tracking-[-0.02em] leading-[22px] max-w-md">
                   Q-Data analyzes millions of data points to provide you with
                   actionable insights and personalized recommendations, giving
                   you the edge you need to succeed.
@@ -74,7 +74,7 @@ export default function QData() {
                       <h4 className="text-[1.125rem] leading-[24px] font-bold text-white mb-2 tracking-[-0.02em]">
                         {feature.title}
                       </h4>
-                      <p className="text-[#A0A0A0] text-[0.875rem] font-medium tracking-[-0.02em] leading-[22px]">
+                      <p className="text-text-tertiary text-[0.875rem] font-medium tracking-[-0.02em] leading-[22px]">
                         {feature.description}
                       </p>
                     </div>

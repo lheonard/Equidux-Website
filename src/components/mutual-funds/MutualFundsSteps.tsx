@@ -51,7 +51,7 @@ export default function MutualFundsSteps() {
           </div>
           <div className="w-full max-w-2xl">
             <FadeIn delay={0.1}>
-              <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md leading-[24px]">
+              <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary mb-10 max-w-md leading-[24px]">
                 Getting started is simple — no paperwork, no complexity. Just a
                 straightforward path from sign-up to invested.
               </p>
@@ -73,7 +73,7 @@ export default function MutualFundsSteps() {
                 <div
                   key={step.title}
                   data-carousel-card
-                  className="bg-[#fafafa] rounded-[1rem] pt-2 pb-5 px-2 flex flex-col flex-shrink-0 w-[min(340px,calc(100vw-3rem))] md:w-[min(360px,calc(50vw-1.5rem))] lg:w-[360px] snap-start"
+                  className="bg-surface-gray rounded-[1rem] pt-2 pb-5 px-2 flex flex-col flex-shrink-0 w-[min(340px,calc(100vw-3rem))] md:w-[min(360px,calc(50vw-1.5rem))] lg:w-[360px] snap-start"
                 >
                   <div className="w-full aspect-[4/3] bg-white rounded-[1rem] mb-6" />
                   <div className="px-4">
@@ -83,7 +83,7 @@ export default function MutualFundsSteps() {
                     <h3 className="text-[1.5rem] leading-[29px] font-bold text-gray-900 mb-3 tracking-[-0.02em]">
                       {step.title}
                     </h3>
-                    <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px]">
+                    <p className="text-text-secondary text-base font-medium tracking-[-0.02em] leading-[24px]">
                       {step.description}
                     </p>
                   </div>

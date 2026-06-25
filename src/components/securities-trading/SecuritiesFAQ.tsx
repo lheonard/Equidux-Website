@@ -58,7 +58,7 @@ export default function SecuritiesFAQ() {
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] max-w-md mx-auto leading-[24px]">
+              <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary max-w-md mx-auto leading-[24px]">
                 Everything you need to know about getting started, investing,
                 and managing your portfolio.
               </p>
@@ -69,7 +69,7 @@ export default function SecuritiesFAQ() {
             <div className="space-y-3">
               {faqs.map((faq, index) => (
                 <FadeIn key={faq.question} delay={0.1 + index * 0.05}>
-                  <div className="bg-[#fafafa] rounded-[1rem] overflow-hidden transition-all duration-200">
+                  <div className="bg-surface-gray rounded-[1rem] overflow-hidden transition-all duration-200">
                     <button
                       type="button"
                       onClick={() =>
@@ -119,7 +119,7 @@ export default function SecuritiesFAQ() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <p className="text-[#414141] text-[1rem] font-medium tracking-[-0.02em] leading-[24px]">
+                      <p className="text-text-secondary text-[1rem] font-medium tracking-[-0.02em] leading-[24px]">
                         {faq.answer}
                       </p>
                     </div>

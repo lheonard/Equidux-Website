@@ -18,7 +18,7 @@ export default function Hero() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <p className="text-base font-medium tracking-[-0.01em] text-[#414141] mb-8 max-w-lg leading-[24px]">
+              <p className="text-base font-medium tracking-[-0.01em] text-text-secondary mb-8 max-w-lg leading-[24px]">
                 Access powerful investing tools, real-time market insights, and
                 seamless trading experiences across mobile and web.
               </p>
@@ -26,7 +26,7 @@ export default function Hero() {
 
             <FadeIn delay={0.2} fullWidth>
               <div className="flex flex-row items-center gap-4 w-full sm:w-auto mb-12">
-                <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-[#fafafa] text-black text-[0.875rem] md:text-base font-medium hover:bg-gray-100 transition-colors">
+                <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-surface-gray text-black text-[0.875rem] md:text-base font-medium hover:bg-gray-100 transition-colors">
                   Download App
                 </button>
                 <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-black text-white text-[0.875rem] md:text-base font-medium hover:bg-gray-800 transition-colors">
@@ -37,7 +37,7 @@ export default function Hero() {
 
             <FadeIn delay={0.3} fullWidth>
               <div className="w-full overflow-hidden mt-8">
-                <p className="text-[0.75rem] font-semibold text-[#A0A0A0] mb-6 tracking-[0.08em] uppercase">
+                <p className="text-[0.75rem] font-semibold text-text-tertiary mb-6 tracking-[0.08em] uppercase">
                   Partner with top Nigerian companies
                 </p>
                 <div className="flex items-center gap-8 md:gap-12 opacity-60 grayscale">

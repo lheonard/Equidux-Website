@@ -1,5 +1,6 @@
 import FadeIn from "../FadeIn";
 import DualCTA from "../mutual-funds/DualCTA";
+import FeatureCard from "../FeatureCard";
 
 export default function SecuritiesMarkets() {
   return (
@@ -14,7 +15,7 @@ export default function SecuritiesMarkets() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md mx-auto leading-[24px]">
+            <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary mb-10 max-w-md mx-auto leading-[24px]">
               From stable income investments to global growth opportunities,
               Equidux gives you access to markets that match your goals.
             </p>
@@ -27,43 +28,34 @@ export default function SecuritiesMarkets() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
           {/* Left Card: Nigerian Stock Exchange */}
           <FadeIn delay={0.1} fullWidth>
-            <div className="relative bg-[#fafafa] rounded-[1.5rem] p-2 flex flex-col h-full min-h-[480px] lg:min-h-[520px]">
-              <div className="absolute inset-0 bg-[#fafafa] rounded-[1.5rem]" />
-              <div className="relative z-10 bg-white rounded-[1rem] p-6 flex flex-col mb-auto">
-                <h3 className="text-[1.5rem] leading-[29px] font-bold text-gray-900 mb-3 tracking-[-0.02em]">
-                  Nigerian Stock Exchange
-                </h3>
-                <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px]">
-                  Invest in the local economy by buying shares in top Nigerian
-                  companies. Enjoy seamless trading, real-time market data, and
-                  instant execution on the NGX.
-                </p>
-              </div>
-            </div>
+            <FeatureCard
+              title="Nigerian Stock Exchange"
+              description="Invest in the local economy by buying shares in top Nigerian companies. Enjoy seamless trading, real-time market data, and instant execution on the NGX."
+              textPosition="top"
+            />
           </FadeIn>
 
           {/* Middle Card: Green Asset Placeholder */}
           <FadeIn delay={0.2} fullWidth>
-            <div className="bg-primary rounded-[1.5rem] p-2 flex flex-col h-full min-h-[480px] lg:min-h-[520px]">
-              {/* Asset will go here */}
+            <div className="bg-primary rounded-[1.5rem] p-2 flex flex-col h-full min-h-[480px] lg:min-h-[520px] relative overflow-hidden items-center justify-center">
+              <video
+                src="/securities-trading.webm"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover scale-[1.1]"
+              />
             </div>
           </FadeIn>
 
           {/* Right Card: US Stock Market */}
           <FadeIn delay={0.3} fullWidth>
-            <div className="relative bg-[#fafafa] rounded-[1.5rem] p-2 flex flex-col h-full min-h-[480px] lg:min-h-[520px]">
-              <div className="absolute inset-0 bg-[#fafafa] rounded-[1.5rem]" />
-              <div className="relative z-10 bg-white rounded-[1rem] p-6 flex flex-col mt-auto">
-                <h3 className="text-[1.5rem] leading-[29px] font-bold text-gray-900 mb-3 tracking-[-0.02em]">
-                  US Stock Market
-                </h3>
-                <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px]">
-                  Own a piece of the world&apos;s biggest brands. Access
-                  thousands of US stocks and ETFs, trade in fractional shares,
-                  and build a globally diversified portfolio.
-                </p>
-              </div>
-            </div>
+            <FeatureCard
+              title="US Stock Market"
+              description="Own a piece of the world's biggest brands. Access thousands of US stocks and ETFs, trade in fractional shares, and build a globally diversified portfolio."
+              textPosition="bottom"
+            />
           </FadeIn>
         </div>
       </div>

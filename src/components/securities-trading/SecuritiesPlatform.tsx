@@ -14,7 +14,7 @@ export default function SecuritiesPlatform() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md mx-auto leading-[24px]">
+            <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary mb-10 max-w-md mx-auto leading-[24px]">
               Built with security, transparency, and reliability at its core,
               Equidux is designed to protect and grow your wealth.
             </p>
@@ -27,11 +27,11 @@ export default function SecuritiesPlatform() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           {/* Row 1 */}
           <FadeIn delay={0.1} fullWidth>
-            <div className="bg-[#fafafa] rounded-[1.5rem] p-8 flex flex-col justify-end h-full min-h-[280px] lg:min-h-[320px]">
+            <div className="bg-surface-gray rounded-[1.5rem] p-8 flex flex-col justify-end h-full min-h-[280px] lg:min-h-[320px]">
               <h3 className="text-[1.25rem] leading-[28px] font-bold text-gray-900 mb-16 tracking-[-0.02em]">
                 SEC Licensed and Regulated
               </h3>
-              <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px]">
+              <p className="text-text-secondary text-base font-medium tracking-[-0.02em] leading-[24px]">
                 We operate under strict regulatory standards, ensuring your
                 investments are protected and our operations are fully
                 transparent.
@@ -39,14 +39,14 @@ export default function SecuritiesPlatform() {
             </div>
           </FadeIn>
           <FadeIn delay={0.2} fullWidth>
-            <div className="bg-[#fafafa] rounded-[1.5rem] w-full h-full min-h-[280px] lg:min-h-[320px]" />
+            <div className="bg-surface-gray rounded-[1.5rem] w-full h-full min-h-[280px] lg:min-h-[320px]" />
           </FadeIn>
           <FadeIn delay={0.3} fullWidth>
-            <div className="bg-[#fafafa] rounded-[1.5rem] p-8 flex flex-col justify-end h-full min-h-[280px] lg:min-h-[320px]">
+            <div className="bg-surface-gray rounded-[1.5rem] p-8 flex flex-col justify-end h-full min-h-[280px] lg:min-h-[320px]">
               <h3 className="text-[1.25rem] leading-[28px] font-bold text-gray-900 mb-16 tracking-[-0.02em]">
                 Real-Time Portfolio Tracking
               </h3>
-              <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px]">
+              <p className="text-text-secondary text-base font-medium tracking-[-0.02em] leading-[24px]">
                 Monitor your investments, track performance, and analyze your
                 portfolio with our intuitive dashboard.
               </p>
@@ -55,21 +55,21 @@ export default function SecuritiesPlatform() {
 
           {/* Row 2 */}
           <FadeIn delay={0.4} fullWidth>
-            <div className="bg-[#fafafa] rounded-[1.5rem] w-full h-full min-h-[280px] lg:min-h-[320px]" />
+            <div className="bg-surface-gray rounded-[1.5rem] w-full h-full min-h-[280px] lg:min-h-[320px]" />
           </FadeIn>
           <FadeIn delay={0.5} fullWidth>
-            <div className="bg-[#fafafa] rounded-[1.5rem] p-8 flex flex-col justify-end h-full min-h-[280px] lg:min-h-[320px]">
+            <div className="bg-surface-gray rounded-[1.5rem] p-8 flex flex-col justify-end h-full min-h-[280px] lg:min-h-[320px]">
               <h3 className="text-[1.25rem] leading-[28px] font-bold text-gray-900 mb-16 tracking-[-0.02em]">
                 Secure Transactions
               </h3>
-              <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px]">
+              <p className="text-text-secondary text-base font-medium tracking-[-0.02em] leading-[24px]">
                 Bank-level encryption and advanced security protocols ensure
                 your funds and personal data are always protected.
               </p>
             </div>
           </FadeIn>
           <FadeIn delay={0.6} fullWidth>
-            <div className="bg-[#fafafa] rounded-[1.5rem] w-full h-full min-h-[280px] lg:min-h-[320px]" />
+            <div className="bg-surface-gray rounded-[1.5rem] w-full h-full min-h-[280px] lg:min-h-[320px]" />
           </FadeIn>
         </div>
       </div>

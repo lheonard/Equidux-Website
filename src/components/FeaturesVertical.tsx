@@ -57,14 +57,14 @@ export default function FeaturesVertical() {
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="text-[1rem] font-medium tracking-[-0.02em] text-[#414141] mb-10 max-w-md mx-auto leading-[24px]">
+              <p className="text-[1rem] font-medium tracking-[-0.02em] text-text-secondary mb-10 max-w-md mx-auto leading-[24px]">
                 Access multiple investment options designed to help you grow,
                 diversify, and manage your portfolio with confidence.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="flex flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-[#fafafa] text-black text-[0.875rem] md:text-base font-medium hover:bg-gray-100 transition-colors">
+                <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-surface-gray text-black text-[0.875rem] md:text-base font-medium hover:bg-gray-100 transition-colors">
                   Download App
                 </button>
                 <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-black text-white text-[0.875rem] md:text-base font-medium hover:bg-gray-800 transition-colors">
@@ -78,7 +78,7 @@ export default function FeaturesVertical() {
             {features.map((feature, index) => (
               <div
                 key={feature.subtitle}
-                className="bg-[#fafafa] rounded-[1rem] p-6 lg:py-6 lg:pl-10 lg:pr-6 flex flex-col lg:flex-row gap-8 min-h-[440px] sticky transition-all duration-300"
+                className="bg-surface-gray rounded-[1rem] p-6 lg:py-6 lg:pl-10 lg:pr-6 flex flex-col lg:flex-row gap-8 min-h-[440px] sticky transition-all duration-300"
                 style={{ top: `calc(120px + ${index * 24}px)` }}
               >
                 <div className="flex-1 flex flex-col justify-center py-2 lg:py-0">
@@ -88,7 +88,7 @@ export default function FeaturesVertical() {
                   <h3 className="text-[1.5rem] leading-[29px] font-bold text-gray-900 mb-3 tracking-[-0.02em]">
                     {feature.title}
                   </h3>
-                  <p className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px] mb-5 max-w-xl">
+                  <p className="text-text-secondary text-base font-medium tracking-[-0.02em] leading-[24px] mb-5 max-w-xl">
                     {feature.description}
                   </p>
                   <ul className="space-y-4">
@@ -109,7 +109,7 @@ export default function FeaturesVertical() {
                             />
                           </svg>
                         </div>
-                        <span className="text-[#414141] text-base font-medium tracking-[-0.02em] leading-[24px]">
+                        <span className="text-text-secondary text-base font-medium tracking-[-0.02em] leading-[24px]">
                           {bullet}
                         </span>
                       </li>

@@ -38,7 +38,7 @@ export default function CompanyMenuPanel({
                 <h4 className="text-base font-bold text-black leading-[20px] group-hover:text-primary transition-colors">
                   {item.title}
                 </h4>
-                <p className="text-sm font-medium text-[#414141] leading-[20px] mt-1">
+                <p className="text-sm font-medium text-text-secondary leading-[20px] mt-1">
                   {item.description}
                 </p>
               </div>
@@ -59,7 +59,7 @@ export default function CompanyMenuPanel({
             <h4 className="text-base font-bold text-black leading-[20px]">
               Our Parent Company
             </h4>
-            <p className="text-sm font-medium text-[#414141] leading-[20px] mt-1 mb-3">
+            <p className="text-sm font-medium text-text-secondary leading-[20px] mt-1 mb-3">
               Backed by decades of expertise and financial strength.
             </p>
             <Link
@@ -83,7 +83,7 @@ export default function CompanyMenuPanel({
             key={item.title}
             href={item.href}
             onClick={onItemClick}
-            className="flex items-start gap-3 py-3 px-2 rounded-xl hover:bg-[#fafafa] transition-colors group"
+            className="flex items-start gap-3 py-3 px-2 rounded-xl hover:bg-surface-gray transition-colors group"
           >
             <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <Image
@@ -98,7 +98,7 @@ export default function CompanyMenuPanel({
               <h4 className="text-base font-bold text-black leading-[20px] group-hover:text-primary transition-colors">
                 {item.title}
               </h4>
-              <p className="text-sm font-medium text-[#414141] leading-[20px]">
+              <p className="text-sm font-medium text-text-secondary leading-[20px]">
                 {item.description}
               </p>
             </div>
@@ -120,7 +120,7 @@ export default function CompanyMenuPanel({
             <h4 className="text-base font-bold text-black leading-[20px]">
               Our Parent Company
             </h4>
-            <p className="text-sm font-medium text-[#414141] leading-[20px] mt-0.5 mb-2">
+            <p className="text-sm font-medium text-text-secondary leading-[20px] mt-0.5 mb-2">
               Backed by decades of expertise and financial strength.
             </p>
             <Link
