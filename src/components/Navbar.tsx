@@ -123,7 +123,9 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="#"
+              href="https://www.youtube.com/@apelgroup"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-base font-medium text-black hover:text-primary transition-colors"
             >
               Learn
@@ -229,7 +231,9 @@ export default function Navbar() {
                       </span>
                     </button>
                     <Link
-                      href="#"
+                      href="https://www.youtube.com/@apelgroup"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={closeMobile}
                       className="block text-xl font-semibold text-black"
                     >

@@ -63,7 +63,9 @@ export default function CompanyMenuPanel({
               Backed by decades of expertise and financial strength.
             </p>
             <Link
-              href="#"
+              href="https://www.apel.com.ng/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={onItemClick}
               className="text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
             >
@@ -124,7 +126,9 @@ export default function CompanyMenuPanel({
               Backed by decades of expertise and financial strength.
             </p>
             <Link
-              href="#"
+              href="https://www.apel.com.ng/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={onItemClick}
               className="text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
             >
