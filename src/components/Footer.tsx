@@ -10,54 +10,50 @@ export default function Footer() {
         <FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
             <div>
-              <h4 className="text-white font-semibold mb-6">Links</h4>
+              <h4 className="text-white font-semibold mb-6">Company</h4>
               <ul className="space-y-4">
                 <li>
                   <Link
-                    href="/"
+                    href="/securities-trading"
                     className="text-[#aaaaaa] hover:text-white transition-colors"
                   >
-                    Home
+                    Securities
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/mutual-funds"
                     className="text-[#aaaaaa] hover:text-white transition-colors"
                   >
-                    Offering
+                    Mutual Funds
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="https://qdata.africa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#aaaaaa] hover:text-white transition-colors"
                   >
-                    Features
+                    Q-Data
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="https://www.apel.com.ng/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#aaaaaa] hover:text-white transition-colors"
                   >
-                    Stats
+                    Apel
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-6">Company</h4>
+              <h4 className="text-white font-semibold mb-6">Compliance</h4>
               <ul className="space-y-4">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-[#aaaaaa] hover:text-white transition-colors"
-                  >
-                    Terms of Service
-                  </Link>
-                </li>
                 <li>
                   <Link
                     href="#"
@@ -71,7 +67,7 @@ export default function Footer() {
                     href="#"
                     className="text-[#aaaaaa] hover:text-white transition-colors"
                   >
-                    AML
+                    Terms of Service
                   </Link>
                 </li>
               </ul>

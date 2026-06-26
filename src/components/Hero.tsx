@@ -1,9 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import FadeIn from "./FadeIn";
 import HeroVisual from "./HeroVisual";
 
 export default function Hero() {
+  const logos = [
+    { src: "/logos/Frame 2147227083.png", width: 204, height: 72 },
+    { src: "/logos/Frame 24.png", width: 204, height: 72 },
+    { src: "/logos/Mask group.png", width: 204, height: 72 },
+    { src: "/logos/Mask group-1.png", width: 204, height: 72 },
+    { src: "/logos/Mask group-2.png", width: 204, height: 72 },
+    { src: "/logos/cscs logo.png", width: 108, height: 72 },
+  ];
+
   return (
     <section className="pt-24 pb-10 lg:pt-32 lg:pb-16 overflow-hidden min-h-[100dvh] flex items-center">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-[42px]">
@@ -29,46 +39,35 @@ export default function Hero() {
                 <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-surface-gray text-black text-[0.875rem] md:text-base font-medium hover:bg-gray-100 transition-colors">
                   Download App
                 </button>
-                <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-black text-white text-[0.875rem] md:text-base font-medium hover:bg-gray-800 transition-colors">
+                <Link
+                  href="https://app-dev.equidux.com/sign-in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-black text-white text-[0.875rem] md:text-base font-medium hover:bg-gray-800 transition-colors text-center"
+                >
                   Create Account
-                </button>
+                </Link>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.3} fullWidth>
-              <div className="w-full overflow-hidden mt-8">
+              <div className="w-full mt-8">
                 <p className="text-[0.75rem] font-semibold text-text-tertiary mb-6 tracking-[0.08em] uppercase">
                   Partner with top Nigerian companies
                 </p>
-                <div className="flex items-center gap-8 md:gap-12 opacity-60 grayscale">
-                  <Image
-                    src="/logos/Frame 24.svg"
-                    alt="Partner logo"
-                    width={74}
-                    height={25}
-                    className="h-6 w-auto object-contain"
-                  />
-                  <Image
-                    src="/logos/Mask group.svg"
-                    alt="Partner logo"
-                    width={74}
-                    height={25}
-                    className="h-6 w-auto object-contain"
-                  />
-                  <Image
-                    src="/logos/Mask group-1.svg"
-                    alt="Partner logo"
-                    width={74}
-                    height={25}
-                    className="h-6 w-auto object-contain hidden sm:block"
-                  />
-                  <Image
-                    src="/logos/Mask group-2.svg"
-                    alt="Partner logo"
-                    width={74}
-                    height={25}
-                    className="h-6 w-auto object-contain hidden md:block"
-                  />
+                <div className="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)]">
+                  <div className="flex w-max animate-infinite-scroll items-center gap-8 md:gap-12 opacity-60 grayscale hover:[animation-play-state:paused]">
+                    {[...logos, ...logos].map((logo, idx) => (
+                      <Image
+                        key={idx}
+                        src={logo.src}
+                        alt="Partner logo"
+                        width={logo.width}
+                        height={logo.height}
+                        className="h-6 w-auto object-contain max-w-none"
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </FadeIn>

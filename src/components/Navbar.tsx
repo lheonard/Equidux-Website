@@ -136,9 +136,14 @@ export default function Navbar() {
             <button className="text-base font-medium text-black bg-surface-gray hover:bg-gray-100 transition-colors px-6 py-2.5 rounded-full">
               Download App
             </button>
-            <button className="bg-black text-white text-base font-medium px-6 py-2.5 rounded-full hover:bg-gray-800 transition-colors">
+            <Link
+              href="https://app-dev.equidux.com/sign-in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black text-white text-base font-medium px-6 py-2.5 rounded-full hover:bg-gray-800 transition-colors"
+            >
               Create Account
-            </button>
+            </Link>
           </div>
 
           <div className="lg:hidden flex items-center">
@@ -245,9 +250,14 @@ export default function Navbar() {
                     <button className="w-full text-center bg-surface-gray text-black text-base font-bold px-4 py-4 rounded-full hover:bg-gray-100 transition-colors">
                       Download App
                     </button>
-                    <button className="w-full text-center bg-black text-white text-base font-bold px-4 py-4 rounded-full hover:bg-gray-800 transition-colors">
+                    <Link
+                      href="https://app-dev.equidux.com/sign-in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full text-center bg-black text-white text-base font-bold px-4 py-4 rounded-full hover:bg-gray-800 transition-colors"
+                    >
                       Create Account
-                    </button>
+                    </Link>
                   </div>
                 </motion.div>
               ) : (

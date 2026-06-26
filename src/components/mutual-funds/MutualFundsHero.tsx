@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FadeIn from "../FadeIn";
 
 export default function MutualFundsHero() {
@@ -28,9 +29,14 @@ export default function MutualFundsHero() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <button className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-black text-white text-base font-medium hover:bg-gray-800 transition-colors">
+              <Link
+                href="https://app-dev.equidux.com/sign-in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full sm:w-auto px-8 py-3.5 rounded-full bg-black text-white text-center text-base font-medium hover:bg-gray-800 transition-colors"
+              >
                 Get Started
-              </button>
+              </Link>
             </FadeIn>
           </div>
 

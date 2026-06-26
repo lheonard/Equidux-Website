@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import FadeIn from "./FadeIn";
 
 export default function FeaturesHorizontal() {
@@ -68,9 +69,14 @@ export default function FeaturesHorizontal() {
                 <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-surface-gray text-black text-[0.875rem] md:text-base font-medium hover:bg-gray-100 transition-colors">
                   Download App
                 </button>
-                <button className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-black text-white text-[0.875rem] md:text-base font-medium hover:bg-gray-800 transition-colors">
+                <Link
+                  href="https://app-dev.equidux.com/sign-in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 sm:flex-none px-4 sm:px-8 py-3.5 rounded-full bg-black text-white text-[0.875rem] md:text-base font-medium hover:bg-gray-800 transition-colors text-center"
+                >
                   Create Account
-                </button>
+                </Link>
               </div>
             </FadeIn>
           </div>

@@ -55,7 +55,9 @@ export default function MutualFundsChoose() {
                 textPosition="bottom"
               >
                 <Link
-                  href="#"
+                  href="https://app-dev.equidux.com/sign-in"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-base font-semibold text-primary hover:text-primary-dark transition-colors mt-4"
                 >
                   Start investing

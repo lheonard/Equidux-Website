@@ -15,6 +15,6 @@ export const companyMenuItems = [
     title: "Q-Data",
     description: "Make informed decisions with real-time market data",
     icon: "/dropdown/qdata.svg",
-    href: "#",
+    href: "https://qdata.africa/",
   },
 ] as const;

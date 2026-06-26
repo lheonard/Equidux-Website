@@ -22,6 +22,8 @@ export default function CompanyMenuPanel({
             <Link
               key={item.title}
               href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
               onClick={onItemClick}
               className="flex items-start gap-4 group w-full"
             >
@@ -84,6 +86,8 @@ export default function CompanyMenuPanel({
           <Link
             key={item.title}
             href={item.href}
+            target={item.href.startsWith("http") ? "_blank" : undefined}
+            rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
             onClick={onItemClick}
             className="flex items-start gap-3 py-3 px-2 rounded-xl hover:bg-surface-gray transition-colors group"
           >
